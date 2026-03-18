@@ -10,6 +10,7 @@
   <meta property="og:description" content="Project page for La DoubleJ x Orlebar Brown by Greta Varesano." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="single-projects/ob/01.jpg" />
+  <link rel="icon" type="image/png" href="favicon.png" />
 
   <style>
 @font-face {
@@ -119,17 +120,24 @@ a {
   font-size: 14px;
 }
 
-.topbar {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 24px;
-}
-
-.topbar a {
+.topbar-desktop {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 20;
   font-size: 14px;
 }
 
 .topbar-mobile {
+  display: none;
+}
+
+.topbar-mobile a,
+.back-bottom-mobile a {
+  font-size: 14px;
+}
+
+.back-bottom-mobile {
   display: none;
 }
 
@@ -189,7 +197,7 @@ a {
     gap: 12px;
   }
 
-  .topbar {
+  .topbar-desktop {
     display: none;
   }
 
@@ -198,11 +206,20 @@ a {
     justify-content: flex-end;
     margin-bottom: 12px;
   }
+
+  .back-bottom-mobile {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 12px;
+    padding-bottom: 12px;
+  }
 }
   </style>
 </head>
 
 <body>
+  <a class="label-soft topbar-desktop" href="index.html">Back to all projects</a>
+
   <div class="container">
     <div class="topbar-mobile">
       <a class="label-soft" href="index.html">Back to all projects</a>
@@ -232,20 +249,20 @@ a {
     </aside>
 
     <main class="right">
-      <div class="topbar">
-        <a class="label-soft" href="index.html">Back to all projects</a>
-      </div>
-
       <section class="gallery">
         <img class="media" src="single-projects/ob/01.jpg" alt="La DoubleJ x Orlebar Brown project preview" />
         <video class="media" muted playsinline loop autoplay preload="metadata" aria-label="La DoubleJ x Orlebar Brown project video">
           <source src="video/ob.mp4" type="video/mp4" />
         </video>
         <img class="media" src="single-projects/ob/03.gif" alt="La DoubleJ x Orlebar Brown animated project preview" style="filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.08));" />
-                <img class="media" src="single-projects/ob/02.jpg" alt="La DoubleJ x Orlebar Brown campaign layout" />
+        <img class="media" src="single-projects/ob/02.jpg" alt="La DoubleJ x Orlebar Brown campaign layout" />
         <img class="media" src="single-projects/ob/05.jpg" alt="La DoubleJ x Orlebar Brown project asset" />
         <img class="media" src="single-projects/ob/04.jpg" alt="La DoubleJ x Orlebar Brown project detail" />
       </section>
+
+      <div class="back-bottom-mobile">
+        <a class="label-soft" href="index.html">Back to all projects</a>
+      </div>
     </main>
   </div>
 

@@ -119,17 +119,18 @@ a {
   font-size: 14px;
 }
 
-.topbar {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 24px;
-}
-
-.topbar a {
-  font-size: 14px;
+.topbar-desktop {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 20;
 }
 
 .topbar-mobile {
+  display: none;
+}
+
+.back-bottom-mobile {
   display: none;
 }
 
@@ -189,7 +190,7 @@ a {
     gap: 12px;
   }
 
-  .topbar {
+  .topbar-desktop {
     display: none;
   }
 
@@ -198,11 +199,20 @@ a {
     justify-content: flex-end;
     margin-bottom: 12px;
   }
+
+  .back-bottom-mobile {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 12px;
+    padding-bottom: 12px;
+  }
 }
   </style>
 </head>
 
 <body>
+  <a class="label-soft topbar-desktop" href="index.html">Back to all projects</a>
+
   <div class="container">
     <div class="topbar-mobile">
       <a class="label-soft" href="index.html">Back to all projects</a>
@@ -233,16 +243,16 @@ a {
     </aside>
 
     <main class="right">
-      <div class="topbar">
-        <a class="label-soft" href="index.html">Back to all projects</a>
-      </div>
-
       <section class="gallery">
         <img class="media" src="single-projects/lafil/01.gif" alt="La Filarmonica di Milano animated preview" />
         <img class="media" src="single-projects/lafil/02.png" alt="La Filarmonica di Milano homepage interface" />
         <img class="media" src="single-projects/lafil/03.png" alt="La Filarmonica di Milano design detail" />
         <img class="media" src="single-projects/lafil/04.jpg" alt="La Filarmonica di Milano project layout" />
       </section>
+
+      <div class="back-bottom-mobile">
+        <a class="label-soft" href="index.html">Back to all projects</a>
+      </div>
     </main>
   </div>
 

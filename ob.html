@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>La DoubleJ x Orlebar Brown | Greta Varesano</title>
+
+  <meta name="description" content="Project page for La DoubleJ x Orlebar Brown by Greta Varesano." />
+  <meta property="og:title" content="La DoubleJ x Orlebar Brown | Greta Varesano" />
+  <meta property="og:description" content="Project page for La DoubleJ x Orlebar Brown by Greta Varesano." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="single-projects/ob/01.jpg" />
+
+  <style>
+@font-face {
+  font-family: "Portfolio";
+  src: url("font/cucina.ttf") format("truetype");
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Portfolio", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #fff;
+  color: #000;
+  line-height: 1.1;
+}
+
+p,
+a,
+span,
+button,
+h2 {
+  font-family: "Portfolio", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+.label {
+  display: inline-flex;
+  align-self: flex-start;
+  width: auto;
+  max-width: max-content;
+  padding: 4px 10px 5px;
+  border-radius: 10px;
+  background: #D6FF8C;
+  font-size: 16px;
+}
+
+.label-soft {
+  display: inline-flex;
+  width: fit-content;
+  padding: 6px 12px 7px;
+  border-radius: 12px;
+  background: #E5E5E5;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+:root {
+  --gap: 24px;
+  --pad: 24px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--gap);
+  padding: var(--pad);
+}
+
+.left {
+  grid-column: span 4;
+  position: sticky;
+  top: 24px;
+  align-self: start;
+}
+
+.left-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.right {
+  grid-column: span 8;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-description {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-links {
+  display: flex;
+  gap: 12px;
+  padding-top: 12px;
+}
+
+.project-links a {
+  font-size: 14px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 24px;
+}
+
+.topbar a {
+  font-size: 14px;
+}
+
+.topbar-mobile {
+  display: none;
+}
+
+/* GALLERY */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.media {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.media.loaded {
+  opacity: 1;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  :root {
+    --gap: 12px;
+    --pad: 12px;
+  }
+
+  .project-description {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 12px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .left,
+  .right {
+    grid-column: 1 / -1;
+  }
+
+  .left {
+    position: static;
+  }
+
+  .left-inner {
+    gap: 12px;
+  }
+
+  .topbar {
+    display: none;
+  }
+
+  .topbar-mobile {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 12px;
+  }
+}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="topbar-mobile">
+      <a class="label-soft" href="index.html">Back to all projects</a>
+    </div>
+
+    <aside class="left">
+      <div class="left-inner">
+        <p class="label">La DoubleJ x Orlebar Brown</p>
+
+        <div class="project-description">
+          <div>
+            <p>
+              A collaborative seasonal takeover between Orlebar Brown and La DoubleJ, centered on a high-summer capsule collection. The project’s core purpose was to celebrate the "Italianità" through a nostalgic, sun-drenched lens, translating the essence of a Southern Italian summer into a cohesive digital and physical ecosystem.
+              <br><br><br>
+              <span style="color: #767067">Nostalgic Signature</span><br><br>
+              The visual direction draws inspiration from vintage Italian signage and mid-century coastal aesthetics. We anchored the palette with a specific sun-faded yellow—balanced between acid and soft—and integrated custom typography inspired by traditional Italian shop signs to evoke an authentic, "Grand Tour" atmosphere.
+              <br><br><br>
+              <span style="color: #767067">360° Immersion</span><br><br>
+              From editorial landing pages to localized physical event assets, the project ensured a seamless brand narrative. We curated a rhythmic flow across newsletters and social-first "Stories," focusing on the textures of the swimwear and the warmth of the Mediterranean to turn a product launch into a cultural experience.
+              <br><br><br>
+              <span style="color: #767067">Collaborative Polish</span><br><br>
+              As part of a multi-disciplinary effort, the focus remained on elevating the UI through a high-craft approach. Every touchpoint—from digital layouts to on-site event graphics—was designed to feel like a curated summer postcard: fresh, evocative, and deeply rooted in a specific sense of place.
+            </p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="right">
+      <div class="topbar">
+        <a class="label-soft" href="index.html">Back to all projects</a>
+      </div>
+
+      <section class="gallery">
+        <img class="media" src="single-projects/ob/01.jpg" alt="La DoubleJ x Orlebar Brown project preview" />
+        <video class="media" muted playsinline loop autoplay preload="metadata" aria-label="La DoubleJ x Orlebar Brown project video">
+          <source src="video/ob.mp4" type="video/mp4" />
+        </video>
+        <img class="media" src="single-projects/ob/03.gif" alt="La DoubleJ x Orlebar Brown animated project preview" style="filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.08));" />
+                <img class="media" src="single-projects/ob/02.jpg" alt="La DoubleJ x Orlebar Brown campaign layout" />
+        <img class="media" src="single-projects/ob/05.jpg" alt="La DoubleJ x Orlebar Brown project asset" />
+        <img class="media" src="single-projects/ob/04.jpg" alt="La DoubleJ x Orlebar Brown project detail" />
+      </section>
+    </main>
+  </div>
+
+  <script>
+    document.querySelectorAll(".media").forEach((el) => {
+      if (el.tagName === "VIDEO") {
+        el.addEventListener("loadeddata", () => el.classList.add("loaded"));
+      } else if (el.complete) {
+        el.classList.add("loaded");
+      } else {
+        el.addEventListener("load", () => el.classList.add("loaded"));
+      }
+    });
+  </script>
+</body>
+</html>

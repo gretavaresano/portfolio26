@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gestaltungslehre and Design | Greta Varesano</title>
+
+  <meta name="description" content="Project page for Gestaltungslehre and Design by Greta Varesano." />
+  <meta property="og:title" content="Gestaltungslehre and Design | Greta Varesano" />
+  <meta property="og:description" content="Project page for Gestaltungslehre and Design by Greta Varesano." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="single-projects/gestaltung/01.png" />
+
+  <style>
+@font-face {
+  font-family: "Portfolio";
+  src: url("font/cucina.ttf") format("truetype");
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Portfolio", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #fff;
+  color: #000;
+  line-height: 1.1;
+}
+
+p,
+a,
+span,
+button,
+h2 {
+  font-family: "Portfolio", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+.label {
+  display: inline-flex;
+  align-self: flex-start;
+  width: auto;
+  max-width: max-content;
+  padding: 4px 10px 5px;
+  border-radius: 10px;
+  background: #D6FF8C;
+  font-size: 16px;
+}
+
+.label-soft {
+  display: inline-flex;
+  width: fit-content;
+  padding: 6px 12px 7px;
+  border-radius: 12px;
+  background: #E5E5E5;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+:root {
+  --gap: 24px;
+  --pad: 24px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--gap);
+  padding: var(--pad);
+}
+
+.left {
+  grid-column: span 4;
+  position: sticky;
+  top: 24px;
+  align-self: start;
+}
+
+.left-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.right {
+  grid-column: span 8;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-description {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-links {
+  display: flex;
+  gap: 12px;
+  padding-top: 12px;
+}
+
+.project-links a {
+  font-size: 14px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 24px;
+}
+
+.topbar a {
+  font-size: 14px;
+}
+
+.topbar-mobile {
+  display: none;
+}
+
+/* GALLERY */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.media {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.media.loaded {
+  opacity: 1;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  :root {
+    --gap: 12px;
+    --pad: 12px;
+  }
+
+  .project-description {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 12px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .left,
+  .right {
+    grid-column: 1 / -1;
+  }
+
+  .left {
+    position: static;
+  }
+
+  .left-inner {
+    gap: 12px;
+  }
+
+  .topbar {
+    display: none;
+  }
+
+  .topbar-mobile {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 12px;
+  }
+}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="topbar-mobile">
+      <a class="label-soft" href="index.html">Back to all projects</a>
+    </div>
+
+    <aside class="left">
+      <div class="left-inner">
+        <p class="label">Gestaltungslehre and Design</p>
+
+        <div class="project-description">
+          <p>
+            The project is rooted in a brutalist aesthetic: direct, functional, and stripped of unnecessary ornament. The visual language is defined by a "maniacal" focus on typographic scale and white space, ensuring a rhythmic flow that guides the user through complex archival layers.
+          </p>
+
+          <div>
+            <p>
+              In a nod to the fundamentals of visual design, the geometry of the typeface’s letter "G" was used as the structural catalyst for the entire grid. By treating a single glyph as a modular unit, the design bridges the strict discipline of the TU Wien with a contemporary, sharp digital execution—turning a technical obsession into a distinctive visual signature.
+            </p>
+          </div>
+
+          <div class="project-links">
+            <a href="https://gestaltungslehre.tuwien.ac.at/" target="_blank" rel="noopener">Visit Website</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="right">
+      <div class="topbar">
+        <a class="label-soft" href="index.html">Back to all projects</a>
+      </div>
+
+      <section class="gallery">
+        <img class="media" src="single-projects/gestaltung/05.gif" alt="Gestaltungslehre and Design animated preview" />
+        <img class="media" src="single-projects/gestaltung/03.jpg" alt="Gestaltungslehre and Design project detail" />
+        <img class="media" src="single-projects/gestaltung/05.jpg" alt="Gestaltungslehre and Design layout preview" />
+        <img class="media" src="single-projects/gestaltung/01.png" alt="Gestaltungslehre and Design main visual" />
+        <img class="media" src="single-projects/gestaltung/06.jpg" alt="Gestaltungslehre and Design interface detail" style="filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.08));" />
+      </section>
+    </main>
+  </div>
+
+  <script>
+    document.querySelectorAll(".media").forEach((el) => {
+      if (el.complete) {
+        el.classList.add("loaded");
+      } else {
+        el.addEventListener("load", () => el.classList.add("loaded"));
+      }
+    });
+  </script>
+</body>
+</html>

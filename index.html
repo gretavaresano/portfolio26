@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio | Greta Varesano</title>
+
+  <meta name="description" content="Milan-based digital designer blending functionality with style." />
+  <meta property="og:title" content="Greta Varesano Portfolio" />
+  <meta property="og:description" content="Milan-based digital designer blending functionality with style." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="img/og-image.jpg" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+
+  <style>
+/* =========================================================
+   FONTS & RESET
+========================================================= */
+@font-face {
+  font-family: "Portfolio";
+  src: url("font/cucina.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Repro";
+  src: url("font/lau.ttf") format("opentype");
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff;
+  color: #000;
+  font-family: "Portfolio", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.1;
+}
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+p,
+a,
+button {
+  font-family: "Portfolio", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.label {
+  display: inline-block;
+  padding: 4px 10px 5px 10px;
+  border-radius: 10px;
+  background: #D6FF8C;
+  color: #000;
+  font-size: 16px;
+  line-height: 1;
+  font-family: "Portfolio", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.special {
+  color: #000;
+}
+
+.project-title,
+.project-title *,
+.project-name {
+  font-family: "Portfolio", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.project-copy,
+.project-copy p,
+.project-role p,
+.cta-row,
+.cta-row a,
+.left p:not(.label),
+.main p:not(.label) {
+  font-family: "Portfolio", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.cta-row a {
+  text-decoration: underline;
+}
+
+.project-copy {
+  margin-top: 0;
+}
+
+.contact-cta {
+  margin-top: 12px;
+}
+
+/* =========================================================
+   GRID LAYOUT
+========================================================= */
+:root {
+  --gap: 24px;
+  --pad: 24px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--gap);
+  padding: var(--pad);
+}
+
+.left {
+  grid-column: span 4;
+  position: sticky;
+  top: 24px;
+  align-self: start;
+}
+
+.main {
+  grid-column: span 8;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --gap: 12px;
+    --pad: 12px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .left,
+  .main {
+    grid-column: 1 / -1;
+  }
+
+  .left {
+    position: static;
+    top: auto;
+  }
+}
+
+/* =========================================================
+   SPACING UTILITIES
+========================================================= */
+.mt-0  { margin-top: 0; }
+.mt-6  { margin-top: 6px; }
+.mt-12 { margin-top: 12px; }
+.mt-24 { margin-top: 24px; }
+.mt-36 { margin-top: 36px; }
+.mt-48 { margin-top: 48px; }
+.mt-64 { margin-top: 64px; }
+
+.mb-0  { margin-bottom: 0; }
+.mb-6  { margin-bottom: 6px; }
+.mb-12 { margin-bottom: 12px; }
+.mb-24 { margin-bottom: 24px; }
+.mb-36 { margin-bottom: 36px; }
+.mb-48 { margin-bottom: 48px; }
+.mb-64 { margin-bottom: 64px; }
+
+.pt-0  { padding-top: 0; }
+.pt-6  { padding-top: 6px; }
+.pt-12 { padding-top: 12px; }
+.pt-24 { padding-top: 24px; }
+.pt-36 { padding-top: 36px; }
+.pt-48 { padding-top: 48px; }
+.pt-64 { padding-top: 64px; }
+
+.pb-0  { padding-bottom: 0; }
+.pb-6  { padding-bottom: 6px; }
+.pb-12 { padding-bottom: 12px; }
+.pb-24 { padding-bottom: 24px; }
+.pb-36 { padding-bottom: 36px; }
+.pb-48 { padding-bottom: 48px; }
+.pb-64 { padding-bottom: 64px; }
+
+.stack-6 > * + * { margin-top: 6px; }
+.stack-12 > * + * { margin-top: 12px; }
+.stack-24 > * + * { margin-top: 24px; }
+.stack-36 > * + * { margin-top: 36px; }
+.stack-48 > * + * { margin-top: 48px; }
+
+.text-left   { text-align: left; }
+.text-center { text-align: center; }
+.text-right  { text-align: right; }
+
+/* =========================================================
+   MEDIA
+========================================================= */
+.media {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.media.loaded {
+  opacity: 1;
+}
+
+.js-autoplay {
+  will-change: transform;
+}
+
+.misc-video {
+  width: 40%;
+}
+
+.project-header {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--gap);
+  align-items: start;
+}
+
+.project-title {
+  grid-column: span 7;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.project-role {
+  grid-column: span 5;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .project-title,
+  .project-role {
+    grid-column: 1 / -1;
+    text-align: left;
+  }
+
+  .misc-video {
+    width: 100%;
+  }
+}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <aside class="left">
+      <p class="label">Ciao, I'm Greta Varesano</p>
+    </aside>
+
+    <main class="main stack-48 pb-64">
+      <section class="stack-12">
+        <p class="label">About</p>
+        <div class="stack-12">
+          <p>I’m a Milan-based digital designer focused on blending functionality with style. With a background in both visual communication and front-end development, I bridge the gap between creative concepts and technical execution. Off-duty, I’m easily distracted by the world of cute.</p>
+          <p class="contact-cta">
+            <a href="mailto:greta.varesano@gmail.com">Contact Me</a>
+          </p>
+        </div>
+      </section>
+
+      <section class="stack-12">
+        <p class="label">Experiences & Education</p>
+        <div class="stack-48">
+          <article class="stack-12">
+            <header class="project-header">
+              <div class="project-title">
+                The Level Group | La DoubleJ<br />
+                <span class="special">Digital Designer & Web Specialist</span>
+              </div>
+              <div class="project-role">
+                <p>2022 – Present</p>
+              </div>
+            </header>
+            <p>Lead Visual Designer for digital communications and e-commerce projects. I manage the end-to-end design and development of custom web components and landing pages (HTML/CSS), optimizing workflows between creative and engineering teams.</p>
+          </article>
+
+          <article class="stack-12">
+            <header class="project-header">
+              <div class="project-title">
+                <a href="https://gigadesignstudio.com/" target="_blank" rel="noopener">Giga Design Studio</a><br />
+                <span class="special">Digital Designer & Web Specialist</span>
+              </div>
+              <div class="project-role">
+                <p>2020 – 2022</p>
+              </div>
+            </header>
+            <p>Designed immersive digital experiences and brand identities, focusing on building scalable Design Systems for corporate clients such as NaturaSì.</p>
+          </article>
+
+          <article class="stack-12">
+            <header class="project-header">
+              <div class="project-title">
+                Mondadori<br />
+                <span class="special">Digital Designer, Web Specialist & Graphic Designer</span>
+              </div>
+              <div class="project-role">
+                <p>2020 – 2022</p>
+              </div>
+            </header>
+            <p>Conceptualized and executed landing pages and newsletters, balancing editorial content with functional web layouts and printed materials.</p>
+          </article>
+
+          <article class="stack-12">
+            <header class="project-header">
+              <div class="project-title">
+                Politecnico di Milano<br />
+                <span class="special">B.A. in Communication Design</span>
+              </div>
+              <div class="project-role">
+                <p>2016 – 2020</p>
+              </div>
+            </header>
+            <p>Developed a strong foundation in visual communication, digital design, and creative strategy.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="stack-12">
+        <p class="label">Projects</p>
+        <div class="stack-48">
+          <article class="stack-12">
+            <video class="media mb-6 js-autoplay" muted playsinline loop preload="none" aria-label="Gestaltungslehre and Design project showcase">
+              <source src="video/gd.mp4" type="video/mp4" />
+            </video>
+
+            <header class="project-header">
+              <div class="project-title">
+                <span class="special project-name">Gestaltungslehre and Design</span>
+                <div class="cta-row">
+                  <a href="https://gestaltungslehre.tuwien.ac.at/" target="_blank" rel="noopener">Visit Website</a>
+                  <a href="projects/gestaltungslehre-and-design.html">Discover More</a>
+                </div>
+              </div>
+              <div class="project-role">
+                <p>Web Design, Graphic Design<br />Made at Giga Design Studio.</p>
+              </div>
+              <div class="project-title project-copy">
+                <p>Commissioned by the TU Wien, Gestaltungslehre serves as a digital exhibition and archival platform for student research. The challenge was to transform a vast academic output into a high-performance digital environment where the content remains the absolute protagonist.</p>
+              </div>
+            </header>
+          </article>
+
+          <article class="stack-12">
+            <img class="media" alt="Rhoda project preview" src="img/rhoda/01.png" loading="lazy" draggable="false" />
+            <header class="project-header">
+              <div class="project-title">
+                <span class="special project-name">Rhoda</span>
+                <div class="cta-row">
+                  <a href="projects/naturasi.html">Discover More</a>
+                </div>
+              </div>
+              <div class="project-role">
+                <p>Web Design, Identity<br />Independent project.</p>
+              </div>
+              <div class="project-title project-copy">
+                <p>Born as a design test, Rhoda explores the intersection of consultancy and digital identity. The project focuses on a premium service for those moving their professional life to Dubai, providing support for legal and financial setups. I built the brand from scratch, shaping a visual language and digital experience that feels both reliable and innovative.</p>
+              </div>
+            </header>
+          </article>
+
+          <article class="stack-12">
+            <img class="media" alt="NaturaSì redesign preview" src="img/nsi/hero.jpg" loading="lazy" draggable="false" />
+            <header class="project-header">
+              <div class="project-title">
+                <span class="special project-name">NaturaSì</span>
+                <div class="cta-row">
+                  <a href="projects/naturasi.html">Discover More</a>
+                </div>
+              </div>
+              <div class="project-role">
+                <p>Web Design, Identity<br />Made at Giga Design Studio.</p>
+              </div>
+              <div class="project-title project-copy">
+                <p>Led the UX/UI overhaul of the e-commerce ecosystem. I contributed to building a scalable Design System based on Atomic Design principles, addressing complex multi-warehouse logistics and user flows.</p>
+              </div>
+            </header>
+          </article>
+
+          <article class="stack-12">
+            <video class="media mb-6 js-autoplay" muted playsinline loop preload="none" aria-label="April Studio project showcase">
+              <source src="video/april-trailer.mov" type="video/mp4" />
+            </video>
+
+            <header class="project-header">
+              <div class="project-title">
+                <span class="special project-name">April Studio</span>
+                <div class="cta-row">
+                  <a href="https://www.april.studio/" target="_blank" rel="noopener">Visit Website</a>
+                </div>
+              </div>
+              <div class="project-role">
+                <p>Web Design, Graphic Design<br />Made at Giga Design Studio.</p>
+              </div>
+              <div class="project-title project-copy">
+                <p>An immersive digital experience inspired by the visual language of streaming platforms. I designed a fluid interface using micro-videos and dynamic navigation to reflect the creative soul of a high-end fashion agency.</p>
+              </div>
+            </header>
+          </article>
+
+          <article class="stack-12">
+            <video class="media mb-6 js-autoplay" muted playsinline loop preload="none" aria-label="La Filarmonica di Milano project showcase">
+              <source src="video/lafil.mp4" type="video/mp4" />
+            </video>
+
+            <header class="project-header">
+              <div class="project-title">
+                <span class="special project-name">La Filarmonica di Milano</span>
+                <div class="cta-row">
+                  <a href="https://www.lafil.com/" target="_blank" rel="noopener">Visit Website</a>
+                  <a href="projects/lafil.html">Discover More</a>
+                </div>
+              </div>
+              <div class="project-role">
+                <p>Web Design, Graphic Design<br />Made at Giga Design Studio.</p>
+              </div>
+              <div class="project-title project-copy">
+                <p>Developed at Giga Design Studio, this project translated an existing visual identity into a digital interface balancing modernity and rigor with a more playful spirit. Rounded shapes and deliberately pop color accents were used to create a visual language that feels both structured and lively.</p>
+              </div>
+            </header>
+          </article>
+        </div>
+      </section>
+
+      <article class="stack-12">
+        <img class="media" alt="La DoubleJ x Orlebar Brown project preview" src="img/02.jpg" loading="lazy" draggable="false" />
+        <header class="project-header">
+          <div class="project-title">
+            <span class="special project-name">La DoubleJ x Orlebar Brown</span>
+            <div class="cta-row">
+              <a href="projects/naturasi.html">Discover More</a>
+            </div>
+          </div>
+          <div class="project-role">
+            <p>Identity, Web Design, Development<br />Made at La DoubleJ</p>
+          </div>
+          <div class="project-title project-copy">
+            <p>For this collaboration, we translated the visual identity across all digital touchpoints, leveraging centralized Figma systems to synchronize the brand’s storytelling. This approach is core to my routine: designing and managing architectural boards that streamline the narrative between newsletters and social assets, ensuring that every piece of the go-to-market calendar feels like part of a single, cohesive vision.</p>
+          </div>
+        </header>
+      </article>
+
+      <section class="stack-12">
+        <p class="label">Miscellaneous</p>
+        <div class="stack-12">
+          <article class="stack-12">
+            <video class="media mb-6 js-autoplay misc-video" muted playsinline loop preload="none" aria-label="Running from responsibilities video">
+              <source src="video/run.mp4" type="video/mp4" />
+            </video>
+
+            <header class="project-header">
+              <div class="project-title">Good at running from responsibilities</div>
+            </header>
+
+            <div class="cta-row">
+              <a href="projects/naturasi.html">Discover More</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="stack-12">
+        <p class="label">Useless Section</p>
+        <div class="project-title" style="margin-top: 12px;">
+          Maybe you don’t like my portfolio, so here’s a list of super useful links for you:<br /><br />
+          Need to buy a gift?<br />
+          What’s better than <a href="https://alwaysjudgeabookbyitscover.com/" target="_blank" rel="noopener" class="special">ugly books</a>.<br /><br />
+          Love dogs?<br />
+          Here’s <a href="https://www.are.na/anna-matuella/good-dog" target="_blank" rel="noopener" class="special">a collection</a>.<br /><br />
+          Relatable angst?<br />
+          Have fun <a href="https://www.are.na/eugene-zagorsky/memes-to-be-fired" target="_blank" rel="noopener" class="special">here</a>.
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    console.log(
+      "%c Ciao! If you are looking at this code, you are as curious as I am. Hope you enjoy the build! ",
+      "background: #FF6A00; color: #fff; padding: 10px; border-radius: 5px;"
+    );
+
+    document.querySelectorAll(".media").forEach((el) => {
+      if (el.complete) {
+        el.classList.add("loaded");
+      } else {
+        el.addEventListener("load", () => el.classList.add("loaded"));
+      }
+
+      if (el.tagName === "VIDEO") {
+        el.addEventListener("loadeddata", () => el.classList.add("loaded"));
+      }
+    });
+
+    (function () {
+      const vids = document.querySelectorAll(".js-autoplay");
+
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          const v = entry.target;
+
+          if (entry.isIntersecting) {
+            v.play().catch(() => {});
+          } else {
+            v.pause();
+          }
+        });
+      }, { threshold: 0.25 });
+
+      vids.forEach((v) => io.observe(v));
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NaturaSì | Greta Varesano</title>
+
+  <meta name="description" content="Project page for NaturaSì by Greta Varesano." />
+  <meta property="og:title" content="NaturaSì | Greta Varesano" />
+  <meta property="og:description" content="Project page for NaturaSì by Greta Varesano." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="single-projects/nsi/00.jpg" />
+
+  <style>
+@font-face {
+  font-family: "Portfolio";
+  src: url("font/cucina.ttf") format("truetype");
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Portfolio", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #fff;
+  color: #000;
+  line-height: 1.1;
+}
+
+p,
+a,
+span,
+button,
+h2 {
+  font-family: "Portfolio", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+.label {
+  display: inline-flex;
+  align-self: flex-start;
+  width: auto;
+  max-width: max-content;
+  padding: 4px 10px 5px;
+  border-radius: 10px;
+  background: #D6FF8C;
+  font-size: 16px;
+}
+
+.label-soft {
+  display: inline-flex;
+  width: fit-content;
+  padding: 6px 12px 7px;
+  border-radius: 12px;
+  background: #E5E5E5;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+:root {
+  --gap: 24px;
+  --pad: 24px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--gap);
+  padding: var(--pad);
+}
+
+.left {
+  grid-column: span 4;
+  position: sticky;
+  top: 24px;
+  align-self: start;
+}
+
+.left-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.right {
+  grid-column: span 8;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-description {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-links {
+  display: flex;
+  gap: 12px;
+  padding-top: 12px;
+}
+
+.project-links a {
+  font-size: 14px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 24px;
+}
+
+.topbar a {
+  font-size: 14px;
+}
+
+.topbar-mobile {
+  display: none;
+}
+
+/* GALLERY */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.media {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.media.loaded {
+  opacity: 1;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  :root {
+    --gap: 12px;
+    --pad: 12px;
+  }
+
+  .project-description {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 12px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .left,
+  .right {
+    grid-column: 1 / -1;
+  }
+
+  .left {
+    position: static;
+  }
+
+  .left-inner {
+    gap: 12px;
+  }
+
+  .topbar {
+    display: none;
+  }
+
+  .topbar-mobile {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 12px;
+  }
+}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="topbar-mobile">
+      <a class="label-soft" href="index.html">Back to all projects</a>
+    </div>
+
+    <aside class="left">
+      <div class="left-inner">
+        <p class="label">NaturaSì</p>
+
+        <div class="project-description">
+          <div>
+            <p>
+              Originally conceived as a tactical "patch" operation, the project evolved into a comprehensive identity and UX overhaul for NaturaSì, Italy's leading organic supermarket. The challenge was to transform a complex e-commerce infrastructure into a seamless, mission-driven ecosystem that bridges the gap between ethical values and digital convenience.
+              <br><br><br>
+              <span style="color: #767067">Organic System & Identity</span><br><br>
+              Beyond the logo, we redefined the brand’s digital signature across every touchpoint—from social-first "Stories" to editorial recipe layouts. The visual language balances the warmth of the organic sector with the functional precision of a large-scale retailer, ensuring the brand’s "bio" DNA is felt in every interaction.
+              <br><br><br>
+              <span style="color: #767067">Desktop-First Efficiency</span><br><br>
+              Recognizing that a significant portion of grocery shopping still happens via desktop, we obsessed over the transactional flow. We developed a modular component system featuring high-polish UI elements—such as the intuitive delivery-slot hover panel—designed to reduce friction and bring a sense of tactile ease to the digital aisle.
+              <br><br><br>
+              <span style="color: #767067">Omnichannel Utility</span><br><br>
+              From a mobile-optimized Store Locator to data-dense product pages, the design ensures a frictionless transition between online shopping and physical stores. Every component was built to be scalable, turning a fragmented digital presence into a unified, high-performance retail experience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="right">
+      <div class="topbar">
+        <a class="label-soft" href="index.html">Back to all projects</a>
+      </div>
+
+      <section class="gallery">
+        <img class="media" src="single-projects/nsi/00.jpg" alt="NaturaSì main visual" />
+        <img class="media" src="single-projects/nsi/01.jpg" alt="NaturaSì homepage interface" />
+        <img class="media" src="single-projects/nsi/02.jpg" alt="NaturaSì UX detail" />
+        <img class="media" src="single-projects/nsi/03.jpg" alt="NaturaSì design system preview" />
+        <img class="media" src="single-projects/nsi/04.jpg" alt="NaturaSì e-commerce layout" />
+        <img class="media" src="single-projects/nsi/05.jpg" alt="NaturaSì product and content interface" />
+        <img class="media" src="single-projects/nsi/06.jpg" alt="NaturaSì omnichannel experience detail" />
+      </section>
+    </main>
+  </div>
+
+  <script>
+    document.querySelectorAll(".media").forEach((el) => {
+      if (el.complete) {
+        el.classList.add("loaded");
+      } else {
+        el.addEventListener("load", () => el.classList.add("loaded"));
+      }
+    });
+  </script>
+</body>
+</html>

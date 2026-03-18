@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rhoda | Greta Varesano</title>
+
+  <meta name="description" content="Project page for Rhoda by Greta Varesano." />
+  <meta property="og:title" content="Rhoda | Greta Varesano" />
+  <meta property="og:description" content="Project page for Rhoda by Greta Varesano." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="single-projects/rhoda/01.gif" />
+
+  <style>
+@font-face {
+  font-family: "Portfolio";
+  src: url("font/cucina.ttf") format("truetype");
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Portfolio", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #fff;
+  color: #000;
+  line-height: 1.1;
+}
+
+p,
+a,
+span,
+button,
+h2 {
+  font-family: "Portfolio", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+.label {
+  display: inline-flex;
+  align-self: flex-start;
+  width: auto;
+  max-width: max-content;
+  padding: 4px 10px 5px;
+  border-radius: 10px;
+  background: #D6FF8C;
+  font-size: 16px;
+}
+
+.label-soft {
+  display: inline-flex;
+  width: fit-content;
+  padding: 6px 12px 7px;
+  border-radius: 12px;
+  background: #E5E5E5;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+:root {
+  --gap: 24px;
+  --pad: 24px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--gap);
+  padding: var(--pad);
+}
+
+.left {
+  grid-column: span 4;
+  position: sticky;
+  top: 24px;
+  align-self: start;
+}
+
+.left-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.right {
+  grid-column: span 8;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-description {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-links {
+  display: flex;
+  gap: 12px;
+  padding-top: 12px;
+}
+
+.project-links a {
+  font-size: 14px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 24px;
+}
+
+.topbar a {
+  font-size: 14px;
+}
+
+.topbar-mobile {
+  display: none;
+}
+
+/* GALLERY */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.media {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  border-radius: 20px;
+  border: 1px solid #E8E3DB;
+}
+
+.media.loaded {
+  opacity: 1;
+}
+
+video.media {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  :root {
+    --gap: 12px;
+    --pad: 12px;
+  }
+
+  .project-description {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 12px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .left,
+  .right {
+    grid-column: 1 / -1;
+  }
+
+  .left {
+    position: static;
+  }
+
+  .left-inner {
+    gap: 12px;
+  }
+
+  .topbar {
+    display: none;
+  }
+
+  .topbar-mobile {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 12px;
+  }
+}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="topbar-mobile">
+      <a class="label-soft" href="index.html">Back to all projects</a>
+    </div>
+
+    <aside class="left">
+      <div class="left-inner">
+        <p class="label">Rhoda</p>
+
+        <div class="project-description">
+          <p>
+            Rhoda is a premium service designed to simplify company formation and visa processes in the UAE. Developed as a strategic design test, the project transforms complex legal requirements into a seamless, high-trust digital journey for global founders.
+            <br><br><br>
+            <span style="color: #767067">Visual Contrast & Trust</span><br><br>
+            The identity balances institutional reliability with digital speed. A sophisticated palette of sand-inspired off-whites and deep greens provides a grounded feel, ignited by an acid green accent that signals innovation and efficiency.
+            <br><br><br>
+            <span style="color: #767067">Strategic Architecture</span><br><br>
+            A systematic repetition of components and copy reduces cognitive load, building deep user trust within a dense legal environment. This operational flow—from educational content to the "Vault" document management system—is fully optimized for mobile, ensuring founders stay connected to their business setup at all times.
+          </p>
+        </div>
+      </div>
+    </aside>
+
+    <main class="right">
+      <div class="topbar">
+        <a class="label-soft" href="index.html">Back to all projects</a>
+      </div>
+
+      <section class="gallery">
+        <img class="media" src="single-projects/rhoda/03.png" alt="Rhoda interface overview" />
+        <img class="media" src="single-projects/rhoda/02.png" alt="Rhoda design system detail" />
+        <img class="media" src="single-projects/rhoda/01.gif" alt="Rhoda animated interaction preview" />
+        <img class="media" src="single-projects/rhoda/04.jpg" alt="Rhoda mobile interface detail" />
+      </section>
+    </main>
+  </div>
+
+  <script>
+    document.querySelectorAll(".media").forEach((el) => {
+      if (el.complete) {
+        el.classList.add("loaded");
+      } else {
+        el.addEventListener("load", () => el.classList.add("loaded"));
+      }
+    });
+  </script>
+</body>
+</html>

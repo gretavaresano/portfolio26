@@ -10,7 +10,7 @@
   <meta property="og:description" content="Project page for Gestaltungslehre and Design by Greta Varesano." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="single-projects/gestaltung/01.png" />
-
+  <link rel="icon" type="image/png" href="favicon.png" />
   <style>
 @font-face {
   font-family: "Portfolio";
@@ -119,17 +119,24 @@ a {
   font-size: 14px;
 }
 
-.topbar {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 24px;
-}
-
-.topbar a {
+.topbar-desktop {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 20;
   font-size: 14px;
 }
 
 .topbar-mobile {
+  display: none;
+}
+
+.topbar-mobile a,
+.back-bottom-mobile a {
+  font-size: 14px;
+}
+
+.back-bottom-mobile {
   display: none;
 }
 
@@ -189,7 +196,7 @@ a {
     gap: 12px;
   }
 
-  .topbar {
+  .topbar-desktop {
     display: none;
   }
 
@@ -198,11 +205,20 @@ a {
     justify-content: flex-end;
     margin-bottom: 12px;
   }
+
+  .back-bottom-mobile {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 12px;
+    padding-bottom: 12px;
+  }
 }
   </style>
 </head>
 
 <body>
+  <a class="label-soft topbar-desktop" href="index.html">Back to all projects</a>
+
   <div class="container">
     <div class="topbar-mobile">
       <a class="label-soft" href="index.html">Back to all projects</a>
@@ -231,10 +247,6 @@ a {
     </aside>
 
     <main class="right">
-      <div class="topbar">
-        <a class="label-soft" href="index.html">Back to all projects</a>
-      </div>
-
       <section class="gallery">
         <img class="media" src="single-projects/gestaltung/05.gif" alt="Gestaltungslehre and Design animated preview" />
         <img class="media" src="single-projects/gestaltung/03.jpg" alt="Gestaltungslehre and Design project detail" />
@@ -242,6 +254,10 @@ a {
         <img class="media" src="single-projects/gestaltung/01.png" alt="Gestaltungslehre and Design main visual" />
         <img class="media" src="single-projects/gestaltung/06.jpg" alt="Gestaltungslehre and Design interface detail" style="filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.08));" />
       </section>
+
+      <div class="back-bottom-mobile">
+        <a class="label-soft" href="index.html">Back to all projects</a>
+      </div>
     </main>
   </div>
 

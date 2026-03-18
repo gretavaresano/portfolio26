@@ -119,17 +119,25 @@ a {
   font-size: 14px;
 }
 
-.topbar {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 24px;
-}
-
-.topbar a {
+/* CTA */
+.topbar-desktop {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 20;
   font-size: 14px;
 }
 
 .topbar-mobile {
+  display: none;
+}
+
+.topbar-mobile a,
+.back-bottom-mobile a {
+  font-size: 14px;
+}
+
+.back-bottom-mobile {
   display: none;
 }
 
@@ -191,7 +199,7 @@ video.media {
     gap: 12px;
   }
 
-  .topbar {
+  .topbar-desktop {
     display: none;
   }
 
@@ -200,11 +208,20 @@ video.media {
     justify-content: flex-end;
     margin-bottom: 12px;
   }
+
+  .back-bottom-mobile {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 12px;
+    padding-bottom: 12px;
+  }
 }
   </style>
 </head>
 
 <body>
+  <a class="label-soft topbar-desktop" href="index.html">Back to all projects</a>
+
   <div class="container">
     <div class="topbar-mobile">
       <a class="label-soft" href="index.html">Back to all projects</a>
@@ -229,16 +246,16 @@ video.media {
     </aside>
 
     <main class="right">
-      <div class="topbar">
-        <a class="label-soft" href="index.html">Back to all projects</a>
-      </div>
-
       <section class="gallery">
         <img class="media" src="single-projects/rhoda/03.png" alt="Rhoda interface overview" />
         <img class="media" src="single-projects/rhoda/02.png" alt="Rhoda design system detail" />
         <img class="media" src="single-projects/rhoda/01.gif" alt="Rhoda animated interaction preview" />
         <img class="media" src="single-projects/rhoda/04.jpg" alt="Rhoda mobile interface detail" />
       </section>
+
+      <div class="back-bottom-mobile">
+        <a class="label-soft" href="index.html">Back to all projects</a>
+      </div>
     </main>
   </div>
 

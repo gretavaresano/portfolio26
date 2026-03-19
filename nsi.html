@@ -47,10 +47,14 @@ p {
 }
 
 a {
-  text-decoration: underline;
   color: inherit;
+  text-decoration: underline;
+  transition: opacity 0.2s ease;
 }
 
+a:hover {
+  opacity: 0.6;
+}
 .label {
   display: inline-flex;
   align-self: flex-start;

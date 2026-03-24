@@ -12,7 +12,6 @@
   <meta property="og:image" content="img/og-image.jpg" />
   <link rel="icon" type="image/png" href="favicon.png" />
 
-
   <style>
 /* =========================================================
    FONTS & RESET
@@ -70,6 +69,7 @@ a {
 a:hover {
   opacity: 0.6;
 }
+
 .label {
   display: inline-block;
   padding: 4px 10px 5px 10px;
@@ -235,6 +235,12 @@ a:hover {
   width: 40%;
 }
 
+.video-row-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+}
+
 .project-header {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -262,6 +268,10 @@ a:hover {
 
   .misc-video {
     width: 100%;
+  }
+
+  .video-row-3 {
+    grid-template-columns: 1fr;
   }
 }
   </style>
@@ -447,24 +457,75 @@ a:hover {
         </div>
       </section>
 
-      <article class="stack-12">
-        <img class="media" alt="La DoubleJ x Orlebar Brown project preview" src="img/02.jpg" loading="lazy" draggable="false" />
-        <header class="project-header">
-          <div class="project-title">
-            <span class="special project-name">La DoubleJ x Orlebar Brown</span>
-            <div class="cta-row">
-                            <a href="https://www.ladoublej.com/en/mediterranean-guide-2024/">Visit Website</a>
-              <a href="ob.html">Discover More</a>
+      <section class="stack-12">
+        <p class="label">Featured Work</p>
+        <div class="stack-48">
+          <article class="stack-12">
+            <img class="media" alt="La DoubleJ digital design and communications preview" src="contents/hero-ldj.png" loading="lazy" draggable="false" />
+            <header class="project-header">
+              <div class="project-title">
+                <span class="special project-name">La DoubleJ — Digital Design & Communications</span>
+                <div class="cta-row">
+                  <a href="ldj.html">Discover More</a>
+                </div>
+              </div>
+              <div class="project-role">
+                <p>Digital Design, Communications, Development<br />Made at La DoubleJ.</p>
+              </div>
+              <div class="project-title project-copy">
+                <p>Since 2022, I've been the sole digital designer behind La DoubleJ's communication ecosystem. Working autonomously across the full creative pipeline — from visual research to front-end development — I translate the brand's ever-shifting identity into a coherent digital presence across newsletters, editorial pages, social and paid social assets.</p>
+              </div>
+            </header>
+          </article>
+
+          <article class="stack-12">
+            <div class="video-row-3">
+              <video class="media js-autoplay" muted playsinline loop preload="none" aria-label="Motion and paid social asset 1 for La DoubleJ">
+                <source src="contents/ldj-motion-01.mp4" type="video/mp4" />
+              </video>
+
+              <video class="media js-autoplay" muted playsinline loop preload="none" aria-label="Motion and paid social asset 2 for La DoubleJ">
+                <source src="contents/ldj-motion-02.mp4" type="video/mp4" />
+              </video>
+
+              <video class="media js-autoplay" muted playsinline loop preload="none" aria-label="Motion and paid social asset 3 for La DoubleJ">
+                <source src="contents/ldj-motion-03.mp4" type="video/mp4" />
+              </video>
             </div>
-          </div>
-          <div class="project-role">
-            <p>Identity, Web Design, Development<br />Made at La DoubleJ</p>
-          </div>
-          <div class="project-title project-copy">
-            <p>For this collaboration, we translated the visual identity across all digital touchpoints, leveraging centralized Figma systems to synchronize the brand’s storytelling. This approach is core to my routine: designing and managing architectural boards that streamline the narrative between newsletters and social assets, ensuring that every piece of the go-to-market calendar feels like part of a single, cohesive vision.</p>
-          </div>
-        </header>
-      </article>
+
+            <header class="project-header">
+              <div class="project-title">
+                <span class="special project-name">Motion & Paid Social x La DoubleJ</span>
+              </div>
+              <div class="project-role">
+                <p>Motion Design, Paid Social<br />Made at La DoubleJ.</p>
+              </div>
+              <div class="project-title project-copy">
+                <p>Three animations, three different visual languages — all produced end-to-end in After Effects and Premiere. One of them became the best-performing paid social asset in the homeware category.</p>
+              </div>
+            </header>
+          </article>
+
+          <article class="stack-12">
+            <img class="media" alt="La DoubleJ x Orlebar Brown project preview" src="img/02.jpg" loading="lazy" draggable="false" />
+            <header class="project-header">
+              <div class="project-title">
+                <span class="special project-name">La DoubleJ x Orlebar Brown</span>
+                <div class="cta-row">
+                  <a href="https://www.ladoublej.com/en/mediterranean-guide-2024/" target="_blank" rel="noopener">Visit Website</a>
+                  <a href="ob.html">Discover More</a>
+                </div>
+              </div>
+              <div class="project-role">
+                <p>Identity, Web Design, Development<br />Made at La DoubleJ</p>
+              </div>
+              <div class="project-title project-copy">
+                <p>For this collaboration, I translated the visual identity across all digital touchpoints — managing the centralized Figma systems that kept the brand's storytelling synchronized across newsletters, social assets and campaign moments. Every piece of the go-to-market calendar was designed to feel like part of a single, cohesive vision.</p>
+              </div>
+            </header>
+          </article>
+        </div>
+      </section>
 
       <section class="stack-12">
         <p class="label">Miscellaneous</p>

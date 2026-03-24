@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>La DoubleJ — Digital Design & Communications | Greta Varesano</title>
+
+  <meta name="description" content="Project page for La DoubleJ — Digital Design & Communications by Greta Varesano." />
+  <meta property="og:title" content="La DoubleJ — Digital Design & Communications | Greta Varesano" />
+  <meta property="og:description" content="Project page for La DoubleJ — Digital Design & Communications by Greta Varesano." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="contents/hero-ldj.png" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <style>
+    @font-face {
+      font-family: "Portfolio";
+      src: url("font/cucina.ttf") format("truetype");
+      font-display: swap;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --gap: 24px;
+      --pad: 24px;
+      --caption-width: 50%;
+    }
+
+    body {
+      font-family: "Portfolio", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: #fff;
+      color: #000;
+      line-height: 1.1;
+    }
+
+    p,
+    a,
+    span,
+    button,
+    h2 {
+      font-family: "Portfolio", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.2;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+      transition: opacity 0.2s ease;
+    }
+
+    a:hover {
+      opacity: 0.6;
+    }
+
+    .label {
+      display: inline-flex;
+      align-self: flex-start;
+      width: auto;
+      max-width: max-content;
+      padding: 4px 10px 5px;
+      border-radius: 10px;
+      background: #D6FF8C;
+      font-size: 16px;
+    }
+
+    .label-soft {
+      display: inline-flex;
+      width: fit-content;
+      padding: 6px 12px 7px;
+      border-radius: 12px;
+      background: #E5E5E5;
+      font-size: 12px;
+      text-decoration: none;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: var(--gap);
+      padding: var(--pad);
+    }
+
+    .left {
+      grid-column: span 4;
+      position: sticky;
+      top: 24px;
+      align-self: start;
+    }
+
+    .left-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .right {
+      grid-column: span 8;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-description {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 12px;
+      padding-top: 12px;
+    }
+
+    .project-links a {
+      font-size: 14px;
+    }
+
+    .topbar-desktop {
+      position: fixed;
+      top: 24px;
+      right: 24px;
+      z-index: 20;
+      font-size: 14px;
+    }
+
+    .topbar-mobile {
+      display: none;
+    }
+
+    .topbar-mobile a,
+    .back-bottom-mobile a {
+      font-size: 14px;
+    }
+
+    .back-bottom-mobile {
+      display: none;
+    }
+
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap);
+    }
+
+    .media {
+      width: 100%;
+      height: auto;
+      display: block;
+      opacity: 0;
+      transition: opacity 0.6s ease;
+    }
+
+    .media.loaded {
+      opacity: 1;
+    }
+
+    .caption {
+      font-size: 12px;
+      line-height: 1.2;
+      color: #767067;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--gap);
+    }
+
+    .full-width-block {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .video-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--gap);
+    }
+
+    .video-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--gap);
+    }
+
+    video.media {
+      background: #f5f5f5;
+    }
+
+    .block-with-left-caption {
+      display: grid;
+      gap: 10px var(--gap);
+    }
+
+    .block-with-left-caption.two-cols {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .block-with-left-caption.three-cols {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .content-span-2 {
+      grid-column: 1 / -1;
+    }
+
+    /* HERO / TYPE */
+    .type-asset {
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    .type-asset img,
+    .type-asset video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* CAPTIONS CENTERED IN THE RIGHT AREA */
+    .caption-centered {
+      width: var(--caption-width);
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      :root {
+        --gap: 12px;
+        --pad: 12px;
+        --caption-width: 100%;
+      }
+
+      .project-description {
+        gap: 16px;
+        padding-bottom: 12px;
+      }
+
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      .left,
+      .right {
+        grid-column: 1 / -1;
+      }
+
+      .left {
+        position: static;
+      }
+
+      .left-inner {
+        gap: 12px;
+      }
+
+      .topbar-desktop {
+        display: none;
+      }
+
+      .topbar-mobile {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 12px;
+      }
+
+      .back-bottom-mobile {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 12px;
+        padding-bottom: 12px;
+        margin-bottom: calc(24px + env(safe-area-inset-bottom));
+      }
+
+      .two-col {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .video-grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .video-grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .block-with-left-caption.two-cols {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .block-with-left-caption.three-cols {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .caption {
+        font-size: 11px;
+      }
+
+      .type-asset {
+        width: 70%;
+        margin: 0 auto;
+      }
+
+      .caption-centered {
+        width: 100%;
+        margin: 0;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="label-soft topbar-desktop" href="index.html">Back to all projects</a>
+
+  <div class="container">
+    <div class="topbar-mobile">
+      <a class="label-soft" href="index.html">Back to all projects</a>
+    </div>
+
+    <aside class="left">
+      <div class="left-inner">
+        <p class="label">La DoubleJ — Digital Design & Communications</p>
+
+        <div class="project-description">
+          <div>
+            <p>
+              Each of the four campaigns shown here follows the same process: visual research, identity definition, and end-to-end design across newsletters, stories and social assets — built from scratch every time. The showcase is intentionally varied: same brand, four completely different visual languages.
+              <br><br>Beyond communications, the work occasionally extends into the design and development of custom web pages built directly on the e-commerce — including event-driven experiences like the <a href="https://www.ladoublej.com/en/salone-del-mobile-2025/" target="_blanl">Salone del Mobile 2025 landing page</a>.
+            </p>
+
+            <!--
+            <div class="project-links">
+              <a href="https://example.com" target="_blank" rel="noopener">Visit Website</a>
+            </div>
+            -->
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="right">
+      <section class="gallery">
+
+
+
+        <!-- CINDERELLEA -->
+        <div>
+          <img class="media" src="contents/01_c.jpg" alt="Mother featured asset" />
+        </div>
+        <p class="caption caption-centered">
+          Campaign identity, newsletters & stories — including custom handwritten type.
+        </p>
+        <div class="two-col">
+          <img class="media" src="contents/03_c.jpg" alt="Fresco newsletter layout" />
+          <img class="media" src="contents/04_c.jpg" alt="Fresco stories layout" />
+        </div>
+
+
+        <!-- FRESCO -->
+        <div>
+          <img class="media" src="contents/02_f.jpg" alt="Mother featured asset" />
+        </div>
+        <p class="caption caption-centered">
+          Editorial identity translated across newsletters and social stories.
+        </p>
+        <div class="two-col">
+          <img class="media" src="contents/03_f.jpg" alt="Fresco newsletter layout" />
+          <img class="media" src="contents/04_f.jpg" alt="Fresco stories layout" />
+        </div>
+
+
+
+
+        <!-- DIVINE -->
+        <div>
+          <img class="media" src="contents/01_d.jpg" alt="Mother featured asset" />
+        </div>
+        <p class="caption caption-centered">
+          Ready-to-wear campaign built around a specific shade of Milanese yellow — carried consistently across newsletters and stories.
+        </p>
+
+        <div class="two-col">
+          <img class="media" src="contents/02_d.jpg" alt="Mother newsletter layout" />
+          <img class="media" src="contents/03_d.jpg" alt="Mother stories layout" />
+        </div>
+
+
+                <!-- MOTHER -->
+                <div>
+                  <img class="media" src="contents/02_m.jpg" alt="Mother featured asset" />
+                </div>
+                <p class="caption caption-centered">
+                  Collaboration identity: from the initial visual concept through stories, newsletters and the full go-to-market rollout.
+                </p>
+        
+                <div class="two-col">
+                  <img class="media" src="contents/04_m.jpg" alt="Mother newsletter layout" />
+                  <img class="media" src="contents/03_m.jpg" alt="Mother stories layout" />
+                </div>
+
+<!-- 
+                <div>
+                  <img class="media" src="imgs/full.jpg" alt="Figma Dashboard" />
+                </div>
+                <p class="caption caption-centered">
+                  Mother — a modular composition combining story sequences with a hero visual.
+                </p> -->
+
+        <!-- VIDEO 1 + 2
+        <div class="block-with-left-caption two-cols">
+          <div class="video-grid-2 content-span-2">
+            <video class="media" muted playsinline loop autoplay preload="metadata" aria-label="Solar campaign video 1">
+              <source src="ldj-contents/01.mp4" type="video/mp4" />
+            </video>
+
+            <video class="media" muted playsinline loop autoplay preload="metadata" aria-label="Solar campaign video 2">
+              <source src="ldj-contents/02.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+
+        <p class="caption caption-centered">
+          Motion outputs translated into short-form visual storytelling.
+        </p> -->
+
+        <!-- VIDEO 3 + 4 + 5 -->
+                 <!-- <p class="caption caption-centered">
+          A final set of motion assets designed for flexible digital placements.
+        </p>
+        <div class="block-with-left-caption three-cols">
+          
+          <div class="video-grid-3 content-span-2">
+            <video class="media" muted playsinline loop autoplay preload="metadata" aria-label="Solar campaign video 3">
+              <source src="ldj-contents/01.mp4" type="video/mp4" />
+            </video>
+
+            <video class="media" muted playsinline loop autoplay preload="metadata" aria-label="Solar campaign video 4">
+              <source src="ldj-contents/02.mp4" type="video/mp4" />
+            </video>
+
+            <video class="media" muted playsinline loop autoplay preload="metadata" aria-label="Solar campaign video 5">
+              <source src="ldj-contents/03.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div> -->
+
+
+
+      </section>
+
+      <div class="back-bottom-mobile">
+        <a class="label-soft" href="index.html">Back to all projects</a>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    document.querySelectorAll(".media").forEach((el) => {
+      if (el.tagName === "VIDEO") {
+        el.addEventListener("loadeddata", () => el.classList.add("loaded"));
+      } else if (el.complete) {
+        el.classList.add("loaded");
+      } else {
+        el.addEventListener("load", () => el.classList.add("loaded"));
+      }
+    });
+  </script>
+</body>
+</html>

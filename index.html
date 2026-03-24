@@ -259,6 +259,24 @@ a:hover {
   text-align: right;
 }
 
+.media-link {
+  display: block;
+  text-decoration: none;
+}
+
+.media-link:hover {
+  opacity: 1;
+}
+
+.media-link .media {
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.media-link:hover .media {
+  opacity: 0.85;
+}
+
 @media (max-width: 768px) {
   .project-title,
   .project-role {
@@ -355,9 +373,11 @@ a:hover {
         <p class="label">Projects</p>
         <div class="stack-48">
           <article class="stack-12">
-            <video class="media mb-6 js-autoplay" muted playsinline loop preload="none" aria-label="Gestaltungslehre and Design project showcase">
-              <source src="video/gd.mp4" type="video/mp4" />
-            </video>
+            <a href="gestal.html" class="media-link" aria-label="Open Gestaltungslehre and Design project page">
+              <video class="media mb-6 js-autoplay" muted playsinline loop preload="none" aria-label="Gestaltungslehre and Design project showcase">
+                <source src="video/gd.mp4" type="video/mp4" />
+              </video>
+            </a>
 
             <header class="project-header">
               <div class="project-title">
@@ -377,7 +397,10 @@ a:hover {
           </article>
 
           <article class="stack-12">
-            <img class="media" alt="Rhoda project preview" src="img/rhoda/01.png" loading="lazy" draggable="false" />
+            <a href="rhoda.html" class="media-link" aria-label="Open Rhoda project page">
+              <img class="media" alt="Rhoda project preview" src="img/rhoda/01.png" loading="lazy" draggable="false" />
+            </a>
+
             <header class="project-header">
               <div class="project-title">
                 <span class="special project-name">Rhoda</span>
@@ -395,7 +418,10 @@ a:hover {
           </article>
 
           <article class="stack-12">
-            <img class="media" alt="NaturaSì redesign preview" src="img/nsi/hero.jpg" loading="lazy" draggable="false" />
+            <a href="nsi.html" class="media-link" aria-label="Open NaturaSì project page">
+              <img class="media" alt="NaturaSì redesign preview" src="img/nsi/hero.jpg" loading="lazy" draggable="false" />
+            </a>
+
             <header class="project-header">
               <div class="project-title">
                 <span class="special project-name">NaturaSì</span>
@@ -413,9 +439,11 @@ a:hover {
           </article>
 
           <article class="stack-12">
-            <video class="media mb-6 js-autoplay" muted playsinline loop preload="none" aria-label="April Studio project showcase">
-              <source src="video/april-trailer.mov" type="video/mp4" />
-            </video>
+            <a href="https://www.april.studio/" target="_blank" rel="noopener" class="media-link" aria-label="Visit April Studio website">
+              <video class="media mb-6 js-autoplay" muted playsinline loop preload="none" aria-label="April Studio project showcase">
+                <source src="video/april-trailer.mov" type="video/mp4" />
+              </video>
+            </a>
 
             <header class="project-header">
               <div class="project-title">
@@ -434,9 +462,11 @@ a:hover {
           </article>
 
           <article class="stack-12">
-            <video class="media mb-6 js-autoplay" muted playsinline loop preload="none" aria-label="La Filarmonica di Milano project showcase">
-              <source src="video/lafil.mp4" type="video/mp4" />
-            </video>
+            <a href="lafil.html" class="media-link" aria-label="Open La Filarmonica di Milano project page">
+              <video class="media mb-6 js-autoplay" muted playsinline loop preload="none" aria-label="La Filarmonica di Milano project showcase">
+                <source src="video/lafil.mp4" type="video/mp4" />
+              </video>
+            </a>
 
             <header class="project-header">
               <div class="project-title">
@@ -461,7 +491,10 @@ a:hover {
         <p class="label">Featured Work</p>
         <div class="stack-48">
           <article class="stack-12">
-            <img class="media" alt="La DoubleJ digital design and communications preview" src="contents/hero-ldj.png" loading="lazy" draggable="false" />
+            <a href="ldj.html" class="media-link" aria-label="Open La DoubleJ digital design and communications project page">
+              <img class="media" alt="La DoubleJ digital design and communications preview" src="contents/hero-ldj.png" loading="lazy" draggable="false" />
+            </a>
+
             <header class="project-header">
               <div class="project-title">
                 <span class="special project-name">La DoubleJ — Digital Design & Communications</span>
@@ -507,7 +540,10 @@ a:hover {
           </article>
 
           <article class="stack-12">
-            <img class="media" alt="La DoubleJ x Orlebar Brown project preview" src="img/02.jpg" loading="lazy" draggable="false" />
+            <a href="ob.html" class="media-link" aria-label="Open La DoubleJ x Orlebar Brown project page">
+              <img class="media" alt="La DoubleJ x Orlebar Brown project preview" src="img/02.jpg" loading="lazy" draggable="false" />
+            </a>
+
             <header class="project-header">
               <div class="project-title">
                 <span class="special project-name">La DoubleJ x Orlebar Brown</span>
@@ -531,9 +567,11 @@ a:hover {
         <p class="label">Miscellaneous</p>
         <div class="stack-12">
           <article class="stack-12">
-            <video class="media mb-6 js-autoplay misc-video" muted playsinline loop preload="none" aria-label="Running from responsibilities video">
-              <source src="video/run.mp4" type="video/mp4" />
-            </video>
+            <a href="miscellaneous.html" class="media-link" aria-label="Open miscellaneous page">
+              <video class="media mb-6 js-autoplay misc-video" muted playsinline loop preload="none" aria-label="Running from responsibilities video">
+                <source src="video/run.mp4" type="video/mp4" />
+              </video>
+            </a>
 
             <header class="project-header">
               <div class="project-title">Good at running from responsibilities</div>
